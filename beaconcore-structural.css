@@ -1,0 +1,261 @@
+/* ==================================================
+🜁 BEACONCORE + SABER‑FORCE — FINAL CLEAN SYSTEM
+================================================== */
+
+
+/* --------------------------------------------------
+🜁 STRUCTURAL BASELINE
+-------------------------------------------------- */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #111111;
+
+    /* ✅ global safety */
+    overflow-x: hidden;
+}
+
+/* ✅ safe box model */
+* {
+    box-sizing: border-box;
+}
+
+/* ✅ image containment */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* --------------------------------------------------
+HEADER
+-------------------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.nav-left a,
+.nav-right a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-left a {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-right a {
+    margin-left: 24px;
+    opacity: 0.85;
+}
+
+.nav-right .active {
+    font-weight: 700;
+    opacity: 1;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/* --------------------------------------------------
+PANELS (NO CLIPPING — IMPORTANT)
+-------------------------------------------------- */
+
+.protocol-hero,
+.protocol-overview,
+.protocol-artifacts,
+.protocol-doctrine,
+.surfaces-hero,
+.surfaces-body,
+.surfaces-doctrine {
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+    background: transparent;
+
+    max-width: 100%;
+}
+
+
+/* --------------------------------------------------
+ARTIFACT IMAGES
+-------------------------------------------------- */
+
+.artifact-image {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 24px auto;
+    border-radius: 8px;
+}
+
+
+/* --------------------------------------------------
+TRIAD — FINAL STABLE VERSION
+-------------------------------------------------- */
+
+.triad-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2.5rem 0;
+    border: 1px solid #e2e2e2;
+}
+
+@media (min-width: 750px) {
+    .triad-layout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.triad-column {
+    padding: 16px;
+    border-left: 1px solid #e2e2e2;
+
+    /* ✅ critical */
+    min-width: 0;
+}
+
+.triad-column:first-child {
+    border-left: none;
+}
+
+.triad-column h4 {
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.triad-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+/* ✅ solves clipping permanently */
+.triad-column ul,
+.triad-column li {
+    overflow-wrap: anywhere;
+}
+
+
+/* --------------------------------------------------
+SABER FORCE PRESENTATION
+-------------------------------------------------- */
+
+/* NAV */
+
+html.saber-on .nav-right a {
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+}
+
+html.saber-on .nav-right a:hover {
+    opacity: 1;
+}
+
+
+/* --------------------------------------------------
+HEADER SYSTEM
+-------------------------------------------------- */
+
+html.saber-on header {
+    color: inherit;
+}
+
+html.saber-on header a {
+    color: inherit !important;
+}
+
+
+/* --------------------------------------------------
+PROTOCOL PAGE (BLUE)
+-------------------------------------------------- */
+
+html.saber-on body.protocol-page {
+    background:
+        linear-gradient(
+            to bottom,
+            #050608 0%,
+            #050608 40%,
+            rgba(10, 12, 14, 0.95) 60%,
+            rgba(12, 14, 16, 0.98) 75%,
+            rgba(15, 17, 19, 1) 100%
+        ),
+        url('/obsidian-texture.png');
+
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+
+    color: #dfe7ef;
+}
+
+
+/* --------------------------------------------------
+SURFACES PAGE (WARM NEUTRAL — PREMIUM, NON-RED)
+-------------------------------------------------- */
+
+html.saber-on body.surfaces-page {
+    background:
+        linear-gradient(
+            to bottom,
+            #1f1616 0%,      /* deep warm neutral */
+            #1c1414 35%,     /* softened oxblood-brown */
+            rgba(30, 22, 22, 0.95) 60%, 
+            rgba(26, 20, 20, 0.98) 75%,
+            rgba(22, 17, 17, 1) 100%
+        ),
+        url('/obsidian-texture.png');
+
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+
+    color: #f2e9e4; /* warm off-white */
+}
+
+html.saber-on body.surfaces-page header {
+    border-bottom: 1px solid rgba(180, 150, 130, 0.18); /* warm metallic */
+}
+
+
+/* --------------------------------------------------
+PRESENTATION PANELS
+-------------------------------------------------- */
+
+html.saber-on .protocol-hero,
+html.saber-on .protocol-overview,
+html.saber-on .protocol-artifacts,
+html.saber-on .protocol-doctrine {
+    background: #050608;
+    color: #dff8ff;
+    border: 1px solid rgba(0,180,255,0.16);
+    border-radius: 10px;
+}
+
+html.saber-on .surfaces-hero,
+html.saber-on .surfaces-body,
+html.saber-on .surfaces-doctrine {
+    background: #241a1a; /* warm matte charcoal */
+    border: 1px solid rgba(200, 180, 160, 0.18); /* soft warm metallic */
+    border-radius: 12px;
+}
