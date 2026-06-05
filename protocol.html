@@ -11,10 +11,14 @@
 
     <style>
         /* TRIAD GEOMETRY */
+        .triad-identity {
+            margin: 80px 0 40px 0;
+        }
+
         .triad-identity-plate {
             position: relative;
             width: 360px;
-            margin: 0 auto 60px auto;
+            margin: 0 auto;
         }
 
         .triad-triangle {
@@ -26,7 +30,8 @@
         .triad-triangle svg {
             width: 100%;
             height: 100%;
-            opacity: 0.6;
+            opacity: 0.65;
+            filter: drop-shadow(0 0 6px rgba(255,255,255,0.25));
         }
 
         .triad-sigil-img {
@@ -34,22 +39,23 @@
             width: 150px;
             height: auto;
             transform: translate(-50%, -50%);
+            filter: drop-shadow(0 0 6px rgba(255,255,255,0.18));
         }
 
         /* Vertex positions */
         .sigil-captain {
-            top: 0%;
+            top: 12%;
             left: 50%;
         }
 
         .sigil-councillor {
-            bottom: 0%;
-            left: 15%;
+            bottom: 8%;
+            left: 18%;
         }
 
         .sigil-cartographer {
-            bottom: 0%;
-            right: 15%;
+            bottom: 8%;
+            right: 18%;
             transform: translate(50%, -50%);
         }
 
@@ -58,7 +64,7 @@
             display: flex;
             justify-content: center;
             gap: 48px;
-            margin-top: 24px;
+            margin-top: 20px;
         }
 
         .triad-labels .triad-sigil {
