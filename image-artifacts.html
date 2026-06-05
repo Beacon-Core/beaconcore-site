@@ -8,6 +8,82 @@
 
     <link rel="stylesheet" href="beaconcore-structural.css">
     <link rel="stylesheet" href="saberforce-presentation.css">
+
+    <style>
+        /* TRIAD GEOMETRY PLATE */
+        .triad-identity {
+            margin: 40px 0 20px 0;
+        }
+
+        .triad-identity-plate {
+            position: relative;
+            width: 360px;
+            margin: 0 auto 40px auto;
+        }
+
+        .triad-triangle {
+            width: 100%;
+            height: 320px;
+            position: relative;
+        }
+
+        .triad-triangle svg {
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+        }
+
+        .triad-sigil-img {
+            position: absolute;
+            width: 150px;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+
+        .sigil-custodian {
+            top: 0%;
+            left: 50%;
+        }
+
+        .sigil-harmonizer {
+            bottom: 0%;
+            left: 15%;
+        }
+
+        .sigil-harmonizer3 {
+            bottom: 0%;
+            right: 15%;
+            transform: translate(50%, -50%);
+        }
+
+        .triad-labels {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 16px;
+        }
+
+        .triad-labels .triad-sigil {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 700px) {
+            .triad-identity-plate {
+                width: 260px;
+            }
+
+            .triad-sigil-img {
+                width: 120px;
+            }
+
+            .triad-labels {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
 </head>
 
 <body class="protocol-page">
@@ -34,7 +110,7 @@
     <section class="protocol-hero">
         <h1>Image Artifacts</h1>
 
-        <img src="harmonizer.png" alt="Harmonizer Artifact"
+        <img src="/assets/images/custodian1.png" alt="Custodian Artifact"
              style="max-width:320px; display:block; margin:20px auto;">
 
         <p class="protocol-preamble">
@@ -56,6 +132,44 @@
             All image artifacts are constraint‑generated.<br>
             They are controlled outputs, not aesthetic variation.
         </p>
+    </section>
+
+    <!-- TRIAD GEOMETRY PLATE -->
+    <section class="triad-identity">
+        <div class="triad-identity-plate">
+
+            <div class="triad-triangle">
+                <svg viewBox="0 0 100 100">
+                    <polyline
+                        points="50,5 5,95 95,95 50,5"
+                        stroke="white"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+
+                <img src="/assets/images/custodian1.png"
+                     class="triad-sigil-img sigil-custodian"
+                     alt="Custodian">
+
+                <img src="/assets/images/harmonizer.png"
+                     class="triad-sigil-img sigil-harmonizer"
+                     alt="Harmonizer">
+
+                <img src="/assets/images/harmonizer3.png"
+                     class="triad-sigil-img sigil-harmonizer3"
+                     alt="Harmonizer Variant">
+            </div>
+
+            <div class="triad-labels">
+                <div class="triad-sigil"><p>Custodian</p></div>
+                <div class="triad-sigil"><p>Harmonizer</p></div>
+                <div class="triad-sigil"><p>Harmonizer Variant</p></div>
+            </div>
+
+        </div>
     </section>
 
     <!-- PLACEMENT -->
@@ -102,13 +216,13 @@
         <div class="sf-grid">
 
             <div class="sf-card">
-                <img src="harmonizer-variant-a.png"
+                <img src="/assets/images/harmonizer.png"
                      alt="Harmonizer Variant A"
                      style="width:100%; max-width:260px; display:block; margin:10px auto;">
             </div>
 
             <div class="sf-card">
-                <img src="harmonizer-variant-b.png"
+                <img src="/assets/images/harmonizer3.png"
                      alt="Harmonizer Variant B"
                      style="width:100%; max-width:260px; display:block; margin:10px auto;">
             </div>
