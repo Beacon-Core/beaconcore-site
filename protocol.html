@@ -10,24 +10,55 @@
     <link rel="stylesheet" href="saberforce-presentation.css">
 
     <style>
-        /* TRIAD IMAGE LAYOUT */
-        .triad-images {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 16px;
+        /* TRIAD GEOMETRY */
+        .triad-identity-plate {
+            position: relative;
+            width: 360px;
+            margin: 0 auto 60px auto;
         }
 
-        .triad-images img {
+        .triad-triangle {
+            width: 100%;
+            height: 320px;
+            position: relative;
+        }
+
+        .triad-triangle svg {
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+        }
+
+        .triad-sigil-img {
+            position: absolute;
             width: 150px;
             height: auto;
+            transform: translate(-50%, -50%);
         }
 
+        /* Vertex positions */
+        .sigil-captain {
+            top: 0%;
+            left: 50%;
+        }
+
+        .sigil-councillor {
+            bottom: 0%;
+            left: 15%;
+        }
+
+        .sigil-cartographer {
+            bottom: 0%;
+            right: 15%;
+            transform: translate(50%, -50%);
+        }
+
+        /* Labels */
         .triad-labels {
             display: flex;
             justify-content: center;
-            gap: 32px;
-            margin-bottom: 40px;
+            gap: 48px;
+            margin-top: 24px;
         }
 
         .triad-labels .triad-sigil {
@@ -63,10 +94,17 @@
                 gap: 32px;
             }
 
-            .triad-images,
+            .triad-identity-plate {
+                width: 260px;
+            }
+
+            .triad-sigil-img {
+                width: 120px;
+            }
+
             .triad-labels {
                 flex-direction: column;
-                align-items: center;
+                gap: 12px;
             }
         }
     </style>
@@ -192,14 +230,25 @@
 
     </section>
 
-    <!-- TRIAD IDENTITY -->
+    <!-- TRIAD IDENTITY WITH GEOMETRY -->
     <section class="triad-identity">
         <div class="triad-identity-plate">
 
-            <div class="triad-images">
-                <img src="/assets/images/captain.png" alt="Captain">
-                <img src="/assets/images/councillor.png" alt="Councillor">
-                <img src="/assets/images/cartographer.png" alt="Cartographer">
+            <div class="triad-triangle">
+                <svg viewBox="0 0 100 100">
+                    <polyline 
+                        points="50,5 5,95 95,95 50,5"
+                        stroke="white"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+
+                <img src="/assets/images/captain.png" class="triad-sigil-img sigil-captain" alt="Captain">
+                <img src="/assets/images/councillor.png" class="triad-sigil-img sigil-councillor" alt="Councillor">
+                <img src="/assets/images/cartographer.png" class="triad-sigil-img sigil-cartographer" alt="Cartographer">
             </div>
 
             <div class="triad-labels">
