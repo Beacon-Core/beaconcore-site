@@ -8,6 +8,41 @@
 
     <link rel="stylesheet" href="beaconcore-structural.css">
     <link rel="stylesheet" href="saberforce-presentation.css">
+
+    <style>
+        /* TRIAD IMAGE LAYOUT */
+        .triad-images {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .triad-images img {
+            width: 120px;
+            height: auto;
+        }
+
+        .triad-labels {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .triad-labels .triad-sigil {
+            text-align: center;
+        }
+
+        /* MOBILE FALLBACK */
+        @media (max-width: 700px) {
+            .triad-images,
+            .triad-labels {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+
 </head>
 
 <body class="protocol-page">
@@ -133,16 +168,16 @@
     <section class="triad-identity">
         <div class="triad-identity-plate">
 
-            <div class="triad-sigil">
-                <p>Captain</p>
+            <div class="triad-images">
+                <img src="/assets/images/captain.png" alt="Captain">
+                <img src="/assets/images/councillor.png" alt="Councillor">
+                <img src="/assets/images/cartographer.png" alt="Cartographer">
             </div>
 
-            <div class="triad-sigil">
-                <p>Councillor</p>
-            </div>
-
-            <div class="triad-sigil">
-                <p>Cartographer</p>
+            <div class="triad-labels">
+                <div class="triad-sigil"><p>Captain</p></div>
+                <div class="triad-sigil"><p>Councillor</p></div>
+                <div class="triad-sigil"><p>Cartographer</p></div>
             </div>
 
         </div>
