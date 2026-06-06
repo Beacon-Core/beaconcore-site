@@ -44,7 +44,102 @@
         </p>
     </section>
 
-    <!-- BODY -->
+    <!-- VISUAL MAP -->
+    <section class="artifact-body">
+
+        <h2>Visual Geometry</h2>
+        <p>
+            Domains, surfaces, fields, execution plane, and envelope shown as a single co‑present structure.<br>
+            No arrows. No flow. No hierarchy.
+        </p>
+
+        <div class="artifact-plate">
+            <p>
+                “Placement, not transformation.”
+            </p>
+        </div>
+
+        <div class="system-map-visual" style="margin: 40px 0;">
+            <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- Background -->
+                <rect x="0" y="0" width="900" height="600" fill="#05070A" />
+
+                <!-- Envelope (Sealed) -->
+                <rect x="40" y="40" width="820" height="520" rx="18"
+                      fill="none" stroke="#3AF2FF" stroke-width="1.5" stroke-dasharray="6 6" />
+                <text x="50" y="70" fill="#7FE9FF" font-size="14" font-family="system-ui, sans-serif">
+                    Envelope — Sealed boundary (no external semantics, hierarchy, causality, narrative, adaptation)
+                </text>
+
+                <!-- Execution Plane (Neutral) -->
+                <rect x="120" y="120" width="660" height="360" rx="14"
+                      fill="none" stroke="#2C9FB5" stroke-width="1.2" stroke-dasharray="4 4" />
+                <text x="130" y="145" fill="#6FD6F0" font-size="13" font-family="system-ui, sans-serif">
+                    Execution Plane — Neutral, stateless, repeatable, non‑interpretive
+                </text>
+
+                <!-- Domains row -->
+                <!-- Compute Domain -->
+                <rect x="140" y="180" width="200" height="150" rx="12"
+                      fill="#070A10" stroke="#4C7FFF" stroke-width="1.2" />
+                <text x="155" y="205" fill="#AFC7FF" font-size="14" font-family="system-ui, sans-serif">
+                    Compute Domain
+                </text>
+                <text x="155" y="225" fill="#7F8FAF" font-size="12">probabilistic</text>
+                <text x="155" y="240" fill="#7F8FAF" font-size="12">non‑authoritative</text>
+                <text x="155" y="255" fill="#7F8FAF" font-size="12">unsealed</text>
+
+                <!-- Surface Domain -->
+                <rect x="350" y="180" width="200" height="150" rx="12"
+                      fill="#070A10" stroke="#3AF2FF" stroke-width="1.2" />
+                <text x="365" y="205" fill="#A7F7FF" font-size="14">Surface Domain</text>
+                <text x="365" y="225" fill="#7FD4E0" font-size="12">deterministic</text>
+                <text x="365" y="240" fill="#7FD4E0" font-size="12">constraint‑bound</text>
+                <text x="365" y="255" fill="#7FD4E0" font-size="12">invariant‑preserving</text>
+
+                <!-- Record Domain -->
+                <rect x="560" y="180" width="200" height="150" rx="12"
+                      fill="#070A10" stroke="#FFB347" stroke-width="1.2" />
+                <text x="575" y="205" fill="#FFD9A0" font-size="14">Record Domain</text>
+                <text x="575" y="225" fill="#D9B37A" font-size="12">immutable</text>
+                <text x="575" y="240" fill="#D9B37A" font-size="12">append‑only</text>
+                <text x="575" y="255" fill="#D9B37A" font-size="12">non‑interpretive</text>
+
+                <!-- Surfaces inside Surface Domain -->
+                <rect x="365" y="265" width="170" height="55" rx="10"
+                      fill="none" stroke="#3AF2FF" stroke-width="1" stroke-dasharray="3 3" />
+                <text x="375" y="285" fill="#A7F7FF" font-size="12">Surfaces (co‑present)</text>
+                <text x="375" y="300" fill="#7FD4E0" font-size="11">Input · Shaping · Output</text>
+
+                <!-- Invariant Field -->
+                <rect x="140" y="350" width="620" height="40" rx="10"
+                      fill="rgba(58, 242, 255, 0.06)" stroke="#3AF2FF" stroke-width="1" />
+                <text x="150" y="375" fill="#9FF9FF" font-size="13">
+                    Invariant Field — spanning all domains (single role, bounded, deterministic, drift‑free)
+                </text>
+
+                <!-- Mechanism Field -->
+                <rect x="140" y="405" width="620" height="40" rx="10"
+                      fill="rgba(159, 249, 255, 0.04)" stroke="#6FD6F0" stroke-width="1" />
+                <text x="150" y="430" fill="#BFEFFF" font-size="13">
+                    Mechanism Field — symmetric across surfaces (boundaries, exclusion, determinism, drift prevention)
+                </text>
+
+                <!-- Geometry Compression -->
+                <rect x="260" y="470" width="380" height="70" rx="12"
+                      fill="none" stroke="#4C7FFF" stroke-width="1" />
+                <text x="275" y="495" fill="#AFC7FF" font-size="13">Geometry Compression</text>
+                <text x="275" y="515" fill="#7F8FAF" font-size="11">
+                    3 domains · 3 surfaces · 2 fields · 1 plane · 1 envelope
+                </text>
+
+            </svg>
+        </div>
+
+    </section>
+
+    <!-- TEXTUAL SYSTEM MAP -->
     <section class="artifact-body">
 
         <h2>1. Domains (Co‑Present)</h2>
@@ -68,18 +163,15 @@
         <p>
             Domain relations are non‑directional and non‑sequential.<br>
             No pipeline. No flow.<br><br>
-
             Placement, not transformation.
         </p>
 
         <h2>3. Surfaces (Placed, Not Sequenced)</h2>
         <p>
             Surfaces exist within the Surface Domain:<br><br>
-
             Input — ingress boundary.<br>
             Shaping — constraint boundary.<br>
             Output — egress boundary.<br><br>
-
             Surfaces are co‑present and spatially defined.<br>
             They do not form a pipeline.
         </p>
@@ -87,50 +179,42 @@
         <h2>4. Invariant Field (Spanning)</h2>
         <p>
             The invariant field spans all domains:<br><br>
-
             single role<br>
             bounded<br>
             deterministic<br>
             drift‑free<br><br>
-
             The field is global and always present.
         </p>
 
         <h2>5. Mechanism Field (Symmetric)</h2>
         <p>
             The mechanism field is symmetric across surfaces:<br><br>
-
             role boundaries<br>
             surface boundaries<br>
             semantic exclusion<br>
             determinism<br>
             drift prevention<br>
             state isolation<br><br>
-
             Mechanisms are persistent, not triggered.
         </p>
 
         <h2>6. Execution Plane (Neutral)</h2>
         <p>
             Execution occurs on a neutral plane:<br><br>
-
             stateless<br>
             repeatable<br>
             non‑interpretive<br><br>
-
             Identical inputs → identical outputs.
         </p>
 
         <h2>7. Envelope (Sealed)</h2>
         <p>
             The envelope defines system boundaries:<br><br>
-
             no external semantics<br>
             no external hierarchy<br>
             no external causality<br>
             no external narrative<br>
             no external adaptation<br><br>
-
             The envelope remains sealed.
         </p>
 
@@ -141,7 +225,6 @@
             Two fields — spanning and symmetric.<br>
             One plane — neutral.<br>
             One envelope — sealed.<br><br>
-
             This is the BeaconCore system geometry.
         </p>
 
