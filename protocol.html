@@ -43,21 +43,9 @@
         }
 
         /* Vertex positions */
-        .sigil-captain {
-            top: 12%;
-            left: 50%;
-        }
-
-        .sigil-councillor {
-            bottom: 8%;
-            left: 18%;
-        }
-
-        .sigil-cartographer {
-            bottom: 8%;
-            right: 18%;
-            transform: translate(50%, -50%);
-        }
+        .sigil-captain { top: 12%; left: 50%; }
+        .sigil-councillor { bottom: 8%; left: 18%; }
+        .sigil-cartographer { bottom: 8%; right: 18%; transform: translate(50%, -50%); }
 
         /* Labels */
         .triad-labels {
@@ -92,6 +80,26 @@
             line-height: 1.6;
         }
 
+        /* TRIAD HOVER BEHAVIOR — BeaconCore Structural Feedback */
+        .triad-column {
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .triad-column:hover {
+            transform: translateY(-4px);
+        }
+
+        .triad-column:hover h4 {
+            color: #9cecff;
+            text-shadow:
+                0 0 6px rgba(156,236,255,0.4),
+                0 0 12px rgba(156,236,255,0.2);
+        }
+
+        .triad-column:hover ul li {
+            color: #cfefff;
+        }
+
         /* MOBILE FALLBACK */
         @media (max-width: 700px) {
             .triad-layout {
@@ -100,18 +108,9 @@
                 gap: 32px;
             }
 
-            .triad-identity-plate {
-                width: 260px;
-            }
-
-            .triad-sigil-img {
-                width: 120px;
-            }
-
-            .triad-labels {
-                flex-direction: column;
-                gap: 12px;
-            }
+            .triad-identity-plate { width: 260px; }
+            .triad-sigil-img { width: 120px; }
+            .triad-labels { flex-direction: column; gap: 12px; }
         }
     </style>
 
