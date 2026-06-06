@@ -72,6 +72,19 @@
             opacity: 0.85;
         }
 
+        /* GRID FIX — ensures 3×3 responsive layout */
+        .sf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            margin-top: 20px;
+        }
+
+        .sf-card {
+            padding: 10px;
+            text-align: center;
+        }
+
         @media (max-width: 700px) {
             .triad-identity-plate {
                 width: 260px;
